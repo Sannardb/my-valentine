@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Typewriter from "../typewrite";
 
 export default function Valentine() {
   const [response, setResponse] = useState("");
@@ -34,7 +35,10 @@ export default function Valentine() {
 
   return (
     <div className="text-center mt-40">
-      <h1 className="mb-10 text-6xl">Will you be my valentine?</h1>
+      <h1 className="mb-10 text-6xl">
+        Will you <Typewriter text="...be my valentine?" delay={100} />
+      </h1>
+
       {buttonsVisible && (
         <div className="flex justify-center gap-10">
           <button
